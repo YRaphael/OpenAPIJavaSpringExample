@@ -1,0 +1,299 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI to Spring Stub Example",
+    "description": "Demonstrate Spring stub generation using Spring OpenAPI generator",
+    "version": "1.0.0-SNAPSHOT"
+  },
+  "paths": {
+    "/api/students": {
+      "get": {
+        "tags": [
+          "students-controller"
+        ],
+        "summary": "Get all students",
+        "operationId": "getAllStudentsUsingGET",
+        "parameters": [
+          {
+            "name": "group_number",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "String"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Student"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "students-controller"
+        ],
+        "summary": "Create or update students from query",
+        "operationId": "createStudentsUsingPOST",
+        "parameters": [],
+        "requestBody": {
+          "description": "requestBody",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Student"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Students created",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Student"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StandardError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/teachers": {
+      "get": {
+        "tags": [
+          "teachers-controller"
+        ],
+        "summary": "Get all teachers",
+        "operationId": "getAllTeachersUsingGET",
+        "parameters": [
+          {
+            "name": "group_number",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "String"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Teacher"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "teachers-controller"
+        ],
+        "summary": "Create or update teachers from query",
+        "operationId": "createTeachersUsingPOST",
+        "parameters": [],
+        "requestBody": {
+          "description": "requestBody",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Teacher"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Teachers created",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teacher"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StandardError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Gender": {
+        "type": "string",
+        "enum": [
+          "Male",
+          "Female"
+        ]
+      },
+      "Teacher": {
+        "required": [
+          "name",
+          "surname",
+          "gender",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "internalDatabaseId": {
+            "type": "String"
+          },
+          "name": {
+            "type": "String",
+            "example": {
+              "value": "Alex"
+            },
+            "maxLength": 255
+          },
+          "surname": {
+            "type": "String",
+            "example": {
+              "value": "Johnson"
+            },
+            "maxLength": 255
+          },
+          "gender": {
+            "$ref": "#/components/schemas/Gender"
+          },
+          "id": {
+            "type": "String",
+            "description": "This field is read only.",
+            "readOnly": true,
+            "deprecated": false
+          }
+        }
+      },
+      "Student": {
+        "required": [
+          "name",
+          "surname",
+          "gender",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "internalDatabaseId": {
+            "type": "String"
+          },
+          "name": {
+            "type": "String",
+            "example": {
+              "value": "Alex"
+            },
+            "maxLength": 255
+          },
+          "surname": {
+            "type": "String",
+            "example": {
+              "value": "Johnson"
+            },
+            "maxLength": 255
+          },
+          "gender": {
+            "$ref": "#/components/schemas/Gender"
+          },
+          "id": {
+            "type": "String",
+            "description": "This field is read only.",
+            "readOnly": true,
+            "deprecated": false
+          }
+        }
+      },
+      "StandardError": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "String"
+          }
+        }
+      },
+      "ValidationError": {
+        "type": "object",
+        "properties": {
+          "validationErrors": {
+            "type": "array",
+            "items": {
+              "type": "String"
+            }
+          },
+          "message": {
+            "type": "String"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+example/university/OpenAPI2SpringBoot$ExitException.class
+example/university/config/HomeController.class
+example/university/OpenAPI2SpringBoot.class
+example/university/RFC3339DateFormat.class
+example/university/OpenAPI2SpringBoot$1.class
+example/university/api/TeachersControllerApiController.class
+example/university/model/StandardError.class
+example/university/api/StudentsControllerApi.class
+example/university/config/OpenAPIDocumentationConfig$BasePathAwareRelativePathProvider.class
+example/university/model/Student.class
+example/university/model/Gender.class
+example/university/model/Teacher.class
+example/university/api/TeachersControllerApi.class
+example/university/api/ApiUtil.class
+example/university/config/OpenAPIDocumentationConfig.class
+example/university/model/ValidationError.class
+example/university/api/StudentsControllerApiController.class

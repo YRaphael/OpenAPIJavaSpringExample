@@ -1,0 +1,14 @@
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/model/Student.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/api/StudentsControllerApiController.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/config/OpenAPIDocumentationConfig.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/api/StudentsControllerApi.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/model/StandardError.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/config/HomeController.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/api/TeachersControllerApi.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/api/TeachersControllerApiController.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/api/ApiUtil.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/model/ValidationError.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/RFC3339DateFormat.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/model/Teacher.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/model/Gender.java
+/home/rafael/IdeaProjects/OpenAPIJavaExample/src/main/java/src/main/java/example/university/OpenAPI2SpringBoot.java

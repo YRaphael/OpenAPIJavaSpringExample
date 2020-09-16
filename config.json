@@ -1,0 +1,24 @@
+{
+    "useTags": true,
+    "title": "UniversityService",
+
+    "java8": true,
+    "dateLibrary": "java8",
+    "library": "spring-boot",
+
+    "groupId": "university",
+
+    "artifactDescription": "simple university api to use in different services",
+    "artifactId": "university-api",
+    "artifactVersion": "0.0.1",
+
+    "useBeanValidation": true,
+    "performBeanValidation": true,
+
+    "hideGenerationTimestamp": true,
+
+    "modelPackage": "example.university.model",
+    "configPackage": "example.university.config",
+    "apiPackage": "example.university.api",
+    "basePackage": "example.university"
+}
